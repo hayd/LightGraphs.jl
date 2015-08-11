@@ -3,7 +3,20 @@ types:
 
 ## Vertices and Edges
 
-{{vertices, edges, is_directed, nv, ne, has_edge, has_vertex, in_edges, out_edges, src, dst, reverse}}
+{{
+    vertices
+    edges
+    is_directed
+    nv
+    ne
+    has_edge
+    has_vertex
+    in_edges
+    out_edges
+    src
+    dst
+    reverse
+}}
 
 ## Neighbors and Degree
 

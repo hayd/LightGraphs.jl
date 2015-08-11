@@ -5,9 +5,10 @@ functions with two graph arguments will require them to be of the same type
 
 ### complement
 ```
-complement(g::LightGraphs.Graph)
-complement(g::LightGraphs.DiGraph)
+1  complement(g::LightGraphs.Graph)
+2  complement(g::LightGraphs.DiGraph)
 ```
+*Source: [1](#pass) [2](#pass)*
 ```rst
 ::
            complement(s)
@@ -19,8 +20,9 @@ Produces the [graph complement](https://en.wikipedia.org/wiki/Complement_graph) 
 
 ### reverse
 ```
-reverse(g::LightGraphs.DiGraph)
+1  reverse(g::LightGraphs.DiGraph)
 ```
+*Source: [1](#pass)*
 ```rst
 ::
            reverse(v [, start=1 [, stop=length(v) ]] )
@@ -32,8 +34,9 @@ Return a copy of ``v`` reversed from start to stop.
 
 ### reverse!
 ```
-reverse!(g::LightGraphs.DiGraph)
+1  reverse!(g::LightGraphs.DiGraph)
 ```
+*Source: [1](#pass)*
 ```rst
 ::
            reverse!(v [, start=1 [, stop=length(v) ]]) -> v
@@ -45,8 +48,9 @@ In-place version of :func:`reverse`.
 
 ### blkdiag
 ```
-blkdiag{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  blkdiag{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 ```rst
 ::
            blkdiag(A...)
@@ -60,8 +64,9 @@ Put simply, the vertices and edges from graph `h` are appended to graph `g`.
 
 ### intersect
 ```
-intersect{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  intersect{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 ```rst
 ::
            intersect(s1,s2...)
@@ -76,24 +81,27 @@ Note that this function may produce a graph with 0-degree vertices.
 
 ### difference
 ```
-difference{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  difference{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 Produces a graph with edges in graph `g` that are not in graph `h`.
 
 Note that this function may produce a graph with 0-degree vertices.
 
 ### symmetric_difference
 ```
-symmetric_difference{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  symmetric_difference{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 Produces a graph with edges from graph `g` that do not exist in graph `h`, and vice versa.
 
 Note that this function may produce a graph with 0-degree vertices.
 
 ### union
 ```
-union{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  union{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 ```rst
 ::
            union(s1,s2...)
@@ -106,7 +114,8 @@ Merges graphs `g` and `h` by taking the set union of all vertices and edges.
 
 ### induced_subgraph
 ```
-induced_subgraph{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, iter)
+1  induced_subgraph{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, iter)
 ```
+*Source: [1](#pass)*
 Filters graph `g` to include only the vertices present in the iterable argument `vs`. Returns the subgraph of `g` induced by `vs`.
 

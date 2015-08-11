@@ -4,16 +4,17 @@ Graphs may be written to I/O streams and files using the `write` function:
 
 ### write
 ```
-write(io::IO, graphname::AbstractString, g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
-write(io::IO, g::LightGraphs.Graph)
-write(io::IO, g::LightGraphs.DiGraph)
-write(g::LightGraphs.Graph)
-write(g::LightGraphs.DiGraph)
-write{S<:AbstractString,G<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(graphs::Dict{S<:AbstractString,G<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}, fn::AbstractString)
-write(g::LightGraphs.Graph, fn::AbstractString)
-write(g::LightGraphs.DiGraph, fn::AbstractString)
-write(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, gname::AbstractString, fn::AbstractString)
+1  write(io::IO, graphname::AbstractString, g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+2  write(io::IO, g::LightGraphs.Graph)
+3  write(io::IO, g::LightGraphs.DiGraph)
+4  write(g::LightGraphs.Graph)
+5  write(g::LightGraphs.DiGraph)
+6  write{S<:AbstractString,G<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(graphs::Dict{S<:AbstractString,G<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}, fn::AbstractString)
+7  write(g::LightGraphs.Graph, fn::AbstractString)
+8  write(g::LightGraphs.DiGraph, fn::AbstractString)
+9  write(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, gname::AbstractString, fn::AbstractString)
 ```
+*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass) [5](#pass) [6](#pass) [7](#pass) [8](#pass) [9](#pass)*
 ```rst
 ::
            write(stream, x)
@@ -36,23 +37,26 @@ Graphs stored using the `write` functions above may be loaded using `readgraph`:
 
 ### readgraph
 ```
-readgraph(fn::AbstractString)
-readgraph(fn::AbstractString, gname::AbstractString)
+1  readgraph(fn::AbstractString)
+2  readgraph(fn::AbstractString, gname::AbstractString)
 ```
+*Source: [1](#pass) [2](#pass)*
 Returns a dictionary of (name=>graph) loaded from file `fn`.
 
 ### readgraphml
 ```
-readgraphml(filename::AbstractString)
-readgraphml(filename::AbstractString, gname::AbstractString)
+1  readgraphml(filename::AbstractString)
+2  readgraphml(filename::AbstractString, gname::AbstractString)
 ```
+*Source: [1](#pass) [2](#pass)*
 Returns a dictionary (name=>graph) from file `fn` stored in [GraphML](http://en.wikipedia.org/wiki/GraphML) format. Can optionally restrict to a single graph by specifying a name in gname.
 
 ### readgml
 ```
-readgml(filename::AbstractString)
-readgml(filename::AbstractString, gname::AbstractString)
+1  readgml(filename::AbstractString)
+2  readgml(filename::AbstractString, gname::AbstractString)
 ```
+*Source: [1](#pass) [2](#pass)*
 Returns a dictionary (name=>graph) from file `fn` stored in [GML](https://en.wikipedia.org/wiki/Graph_Modelling_Language) format. Can optionally restrict to a single graph by specifying a name in gname.
 
 

@@ -6,77 +6,89 @@ types:
 
 ### vertices
 ```
-vertices(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  vertices(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 Return the vertices of a graph.
 
 ### edges
 ```
-edges(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  edges(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 Return the edges of a graph.
 
 ### is_directed
 ```
-is_directed(g::LightGraphs.DiGraph)
-is_directed(g::LightGraphs.Graph)
+1  is_directed(g::LightGraphs.DiGraph)
+2  is_directed(g::LightGraphs.Graph)
 ```
+*Source: [1](#pass) [2](#pass)*
 Returns `true` if `g` is a `DiGraph`.
 
 ### nv
 ```
-nv(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  nv(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 The number of vertices in `g`.
 
 ### ne
 ```
-ne(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  ne(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 The number of edges in `g`.
 
 ### has_edge
 ```
-has_edge(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, src::Int64, dst::Int64)
-has_edge(g::LightGraphs.DiGraph, e::Pair{Int64,Int64})
-has_edge(g::LightGraphs.Graph, e::Pair{Int64,Int64})
+1  has_edge(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, src::Int64, dst::Int64)
+2  has_edge(g::LightGraphs.DiGraph, e::Pair{Int64,Int64})
+3  has_edge(g::LightGraphs.Graph, e::Pair{Int64,Int64})
 ```
+*Source: [1](#pass) [2](#pass) [3](#pass)*
 Return true if the graph `g` has an edge from `src` to `dst`.
 
 ### has_vertex
 ```
-has_vertex(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
+1  has_vertex(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 ```
+*Source: [1](#pass)*
 Return true if `v` is a vertex of `g`.
 
 ### in_edges
 ```
-in_edges(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
+1  in_edges(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 ```
+*Source: [1](#pass)*
 Return an Array of the edges in `g` that arrive at vertex `v`.
 
 ### out_edges
 ```
-out_edges(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
+1  out_edges(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 ```
+*Source: [1](#pass)*
 Return an Array of the edges in `g` that emanate from vertex `v`.
 
 ### src
 ```
-src(e::Pair{Int64,Int64})
+1  src(e::Pair{Int64,Int64})
 ```
+*Source: [1](#pass)*
 Return source of an edge.
 
 ### dst
 ```
-dst(e::Pair{Int64,Int64})
+1  dst(e::Pair{Int64,Int64})
 ```
+*Source: [1](#pass)*
 Return destination of an edge.
 
 ### reverse
 ```
-reverse(g::LightGraphs.DiGraph)
+1  reverse(g::LightGraphs.DiGraph)
 ```
+*Source: [1](#pass)*
 ```rst
 ::
            reverse(v [, start=1 [, stop=length(v) ]] )
@@ -92,102 +104,117 @@ Return a copy of ``v`` reversed from start to stop.
 
 ### degree
 ```
-degree(g::LightGraphs.DiGraph, v::Int64)
-degree(g::LightGraphs.Graph, v::Int64)
-degree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
-degree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::AbstractArray{Int64,1})
+1  degree(g::LightGraphs.DiGraph, v::Int64)
+2  degree(g::LightGraphs.Graph, v::Int64)
+3  degree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+4  degree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::AbstractArray{Int64,1})
 ```
+*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass)*
 Return the number of edges (both ingoing and outgoing) from the vertex `v`.
 
 ### indegree
 ```
-indegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
-indegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
-indegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::AbstractArray{Int64,1})
+1  indegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+2  indegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
+3  indegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::AbstractArray{Int64,1})
 ```
+*Source: [1](#pass) [2](#pass) [3](#pass)*
 Return the number of edges which start at vertex `v`.
 
 ### outdegree
 ```
-outdegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
-outdegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
-outdegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::AbstractArray{Int64,1})
+1  outdegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+2  outdegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
+3  outdegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::AbstractArray{Int64,1})
 ```
+*Source: [1](#pass) [2](#pass) [3](#pass)*
 Return the number of edges which end at vertex `v`.
 
 ### Δ
 ```
-Δ(g)
+1  Δ(g)
 ```
+*Source: [1](#pass)*
 Return the maximum `degree` of vertices in `g`.
 
 ### δ
 ```
-δ(g)
+1  δ(g)
 ```
+*Source: [1](#pass)*
 Return the minimum `degree` of vertices in `g`.
 
 ### Δout
 ```
-Δout(g)
+1  Δout(g)
 ```
+*Source: [1](#pass)*
 Return the maxium `outdegree` of vertices in `g`.
 
 ### δout
 ```
-δout(g)
+1  δout(g)
 ```
+*Source: [1](#pass)*
 Return the minimum `outdegree` of vertices in `g`.
 
 ### δin
 ```
-δin(g)
+1  δin(g)
 ```
+*Source: [1](#pass)*
 Return the maximum `indegree` of vertices in `g`.
 
 ### Δin
 ```
-Δin(g)
+1  Δin(g)
 ```
+*Source: [1](#pass)*
 Return the minimum `indegree` of vertices in `g`.
 
 ### degree_histogram
 ```
-degree_histogram(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  degree_histogram(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 Produces a histogram of degree values across all vertices for the graph `g`. The number of histogram buckets is based on the number of vertices in `g`.
 
 ### density
 ```
-density(g::LightGraphs.DiGraph)
-density(g::LightGraphs.Graph)
+1  density(g::LightGraphs.DiGraph)
+2  density(g::LightGraphs.Graph)
 ```
+*Source: [1](#pass) [2](#pass)*
 Density is defined as the ratio of the number of actual edges to the number of possible edges. This is $|v| |v-1|$ for directed graphs and $(|v| |v-1|) / 2$ for undirected graphs.
 
 ### neighbors
 ```
-neighbors(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
+1  neighbors(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 ```
+*Source: [1](#pass)*
 Returns a list of all neighbors of vertex `v` in `g`.
 
 For DiGraphs, this is equivalent to `out_neighbors(g, v)`.
 
 ### in_neighbors
 ```
-in_neighbors(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
+1  in_neighbors(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 ```
+*Source: [1](#pass)*
 Returns a list of all neighbors connected to vertex `v` by an incoming edge.
 
 ### all_neighbors
 ```
-all_neighbors(g::LightGraphs.DiGraph, v::Int64)
+1  all_neighbors(g::LightGraphs.DiGraph, v::Int64)
 ```
+*Source: [1](#pass)*
 Returns all the vertices which share an edge with `v`.
 
 ### common_neighbors
 ```
-common_neighbors(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, u::Int64, v::Int64)
+1  common_neighbors(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, u::Int64, v::Int64)
 ```
+*Source: [1](#pass)*
 Returns the neighbors common to vertices `u` and `v` in `g`.
 
 

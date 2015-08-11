@@ -9,20 +9,23 @@ Centrality measures implemented in *LightGraphs.jl* include the following:
 
 ### degree_centrality
 ```
-degree_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  degree_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 Calculates the [degree centrality](https://en.wikipedia.org/wiki/Centrality#Degree_centrality) of the graph `g`, with optional (default) normalization.
 
 ### indegree_centrality
 ```
-indegree_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  indegree_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 Calculates the [degree centrality](https://en.wikipedia.org/wiki/Centrality#Degree_centrality) of the graph `g`, with optional (default) normalization.
 
 ### outdegree_centrality
 ```
-outdegree_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  outdegree_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 Calculates the [degree centrality](https://en.wikipedia.org/wiki/Centrality#Degree_centrality) of the graph `g`, with optional (default) normalization.
 
 
@@ -31,8 +34,9 @@ Calculates the [degree centrality](https://en.wikipedia.org/wiki/Centrality#Degr
 
 ### closeness_centrality
 ```
-closeness_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+1  closeness_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
+*Source: [1](#pass)*
 Calculates the [closeness centrality](https://en.wikipedia.org/wiki/Centrality#Closeness_centrality) of the graph `g`.
 
 
@@ -41,9 +45,10 @@ Calculates the [closeness centrality](https://en.wikipedia.org/wiki/Centrality#C
 
 ### betweenness_centrality
 ```
-betweenness_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
-betweenness_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, k::Integer)
+1  betweenness_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+2  betweenness_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, k::Integer)
 ```
+*Source: [1](#pass) [2](#pass)*
 Calculates the [betweenness centrality](https://en.wikipedia.org/wiki/Centrality#Betweenness_centrality) of the graph `g`, or, optionally, of a random subset of `k` vertices. Can optionally include endpoints in the calculations. Normalization is enabled by default.
 
 Betweeness centrality is defined as:
@@ -78,9 +83,10 @@ betweenness: Array{Float64}     Betweenness centrality value per node id.
 
 ### katz_centrality
 ```
-katz_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
-katz_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, α::Real)
+1  katz_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
+2  katz_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, α::Real)
 ```
+*Source: [1](#pass) [2](#pass)*
 Calculates the [Katz centrality](https://en.wikipedia.org/wiki/Katz_centrality) of the graph `g`.
 
 
@@ -89,10 +95,11 @@ Calculates the [Katz centrality](https://en.wikipedia.org/wiki/Katz_centrality) 
 
 ### pagerank
 ```
-pagerank(g::LightGraphs.DiGraph)
-pagerank(g::LightGraphs.DiGraph, α)
-pagerank(g::LightGraphs.DiGraph, α, n)
-pagerank(g::LightGraphs.DiGraph, α, n, ϵ)
+1  pagerank(g::LightGraphs.DiGraph)
+2  pagerank(g::LightGraphs.DiGraph, α)
+3  pagerank(g::LightGraphs.DiGraph, α, n)
+4  pagerank(g::LightGraphs.DiGraph, α, n, ϵ)
 ```
+*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass)*
 Calculates the [PageRank](https://en.wikipedia.org/wiki/PageRank) of the graph `g`. Can optionally specify a different damping factor (`α`), number of iterations (`n`), and convergence threshold (`ϵ`). If convergence is not reached within `n` iterations, an error will be returned.
 
