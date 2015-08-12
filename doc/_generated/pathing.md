@@ -14,14 +14,16 @@ matrix of real number values. The matrix should be indexed by `[src, dst]` (see 
 ```
 1  bfs_tree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, s::Int64)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/traversals/bfs.jl#L167)*.
+
 Provides a breadth-first traversal of the graph `g` starting with source vertex `s`, and returns a directed acyclic graph of vertices in the order they were discovered.
 
 ### dfs_tree
 ```
 1  dfs_tree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, s::Int64)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/traversals/dfs.jl#L196)*.
+
 Provides a depth-first traversal of the graph `g` starting with source vertex `s`, and returns a directed acyclic graph of vertices in the order they were discovered.
 
 
@@ -33,56 +35,64 @@ Provides a depth-first traversal of the graph `g` starting with source vertex `s
 ```
 1  is_connected(g::LightGraphs.Graph)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/connectivity.jl#L33)*.
+
 Returns `true` if `g` is connected. For DiGraphs, this is equivalent to a test of weak connectivity.
 
 ### is_strongly_connected
 ```
 1  is_strongly_connected(g::LightGraphs.DiGraph)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/connectivity.jl#L101)*.
+
 Returns `true` if `g` is (strongly) connected.
 
 ### is_weakly_connected
 ```
 1  is_weakly_connected(g::LightGraphs.DiGraph)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/connectivity.jl#L39)*.
+
 Returns `true` if the undirected graph of `g` is connected.
 
 ### connected_components
 ```
 1  connected_components(g::LightGraphs.Graph)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/connectivity.jl#L10)*.
+
 Returns the [connected components](https://en.wikipedia.org/wiki/Connectivity_(graph_theory)) of an undirected graph `g` as a vector of components, each represented by a vector of vectors of vertices belonging to the component.
 
 ### strongly_connected_components
 ```
 1  strongly_connected_components(g::LightGraphs.DiGraph)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/connectivity.jl#L84)*.
+
 Computes the (strongly) connected components of a directed graph.
 
 ### weakly_connected_components
 ```
 1  weakly_connected_components(g::LightGraphs.DiGraph)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/connectivity.jl#L36)*.
+
 Returns connected components of the undirected graph of `g`.
 
 ### has_self_loop
 ```
 1  has_self_loop(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L207)*.
+
 Returns true if `g` is has any self loops.
 
 ### attracting_components
 ```
 1  attracting_components(g::LightGraphs.DiGraph)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/connectivity.jl#L156)*.
+
 Returns a vector of vectors of integers representing lists of attracting components in `g`. The attracting components are a subset of the strongly connected components in which the components do not have any leaving edges.
 
 ### is_bipartite
@@ -90,7 +100,8 @@ Returns a vector of vectors of integers representing lists of attracting compone
 1  is_bipartite(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 2  is_bipartite(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, s::Int64)
 ```
-*Source: [1](#pass) [2](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/traversals/bfs.jl#L205) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/traversals/bfs.jl#L198)*.
+
 Will return `true` if graph `g` is [bipartite](https://en.wikipedia.org/wiki/Bipartite_graph).
 
 ### condensation
@@ -98,7 +109,8 @@ Will return `true` if graph `g` is [bipartite](https://en.wikipedia.org/wiki/Bip
 1  condensation(g::LightGraphs.DiGraph)
 2  condensation(g::LightGraphs.DiGraph, scc::Array{Array{Int64,1},1})
 ```
-*Source: [1](#pass) [2](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/connectivity.jl#L150) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/connectivity.jl#L127)*.
+
 Computes the condensation graph of the strongly connected components.
 
 Returns the condensation graph associated with `g`. The condensation `h` of a graph `g` is the directed graph where every node in `h` represents a strongly connected component in `g`, and the presence of an edge between between nodes in `h` indicates that there is at least one edge between the associated strongly connected components in `g`. The node numbering in `h` corresponds to the ordering of the components output from `strongly_connected_components`.
@@ -107,7 +119,8 @@ Returns the condensation graph associated with `g`. The condensation `h` of a gr
 ```
 1  period(g::LightGraphs.DiGraph)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/connectivity.jl#L105)*.
+
 Computes the (common) period for all nodes in a strongly connected graph.
 
 
@@ -120,7 +133,8 @@ In graph theory, a cycle is defined to be a path that starts from some vertex
 ```
 1  is_cyclic(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/traversals/dfs.jl#L125)*.
+
 Tests whether a graph contains a cycle through depth-first search. It returns `true` when it finds a cycle, otherwise `false`.
 
 
@@ -133,7 +147,8 @@ Stoer's simple minimum cut gets the minimum cut of an undirected graph.
 1  mincut(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 2  mincut{T}(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph}, distmx::AbstractArray{T,2})
 ```
-*Source: [1](#pass) [2](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/traversals/maxadjvisit.jl#L198) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/traversals/maxadjvisit.jl#L192)*.
+
 Returns a tuple `(parity, bestcut)`, where `parity` is a vector of boolean values that determines the partition in `g` and `bestcut` is the weight of the cut that makes this partition. An optional `distmx` matrix may be specified; if omitted, edge distances are assumed to be 1.
 
 ### maximum_adjacency_visit
@@ -141,7 +156,8 @@ Returns a tuple `(parity, bestcut)`, where `parity` is a vector of boolean value
 1  maximum_adjacency_visit(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 2  maximum_adjacency_visit{T}(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph}, distmx::AbstractArray{T,2}, log::Bool, io::IO)
 ```
-*Source: [1](#pass) [2](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/traversals/maxadjvisit.jl#L217) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/traversals/maxadjvisit.jl#L212)*.
+
 Returns the vertices in `g` traversed by maximum adjacency search. An optional `distmx` matrix may be specified; if omitted, edge distances are assumed to be 1. If `log` (default `false`) is `true`, visitor events will be printed to `io`, which defaults to `STDOUT`; otherwise, no event information will be displayed.
 
 
@@ -159,7 +175,8 @@ General properties of shortest path algorithms:
 2  a_star{T<:Number}(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph}, s::Int64, t::Int64, distmx::AbstractArray{T<:Number,2})
 3  a_star{T<:Number}(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph}, s::Int64, t::Int64, distmx::AbstractArray{T<:Number,2}, heuristic::Function)
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/astar.jl#L52) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/astar.jl#L52) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/astar.jl#L52)*.
+
 Computes the shortest path between vertices `s` and `t` using the [A* search algorithm](http://en.wikipedia.org/wiki/A%2A_search_algorithm). An optional heuristic function and edge distance matrix may be supplied.
 
 ### dijkstra_shortest_paths
@@ -169,7 +186,8 @@ Computes the shortest path between vertices `s` and `t` using the [A* search alg
 3  dijkstra_shortest_paths(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, src::Int64)
 4  dijkstra_shortest_paths{T}(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, src::Int64, distmx::AbstractArray{T,2})
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/dijkstra.jl#L33) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/dijkstra.jl#L33) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/dijkstra.jl#L96) [4](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/dijkstra.jl#L96)*.
+
 Performs [Dijkstra's algorithm](http://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) on a graph, computing shortest distances between a source vertex `s` and all other nodes. Returns a `DijkstraState` that contains various traversal information (see below).
 
 With `allpaths=true`, returns a `DijkstraState` that keeps track of all predecessors of a given vertex (see below).
@@ -181,7 +199,8 @@ With `allpaths=true`, returns a `DijkstraState` that keeps track of all predeces
 3  bellman_ford_shortest_paths(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 4  bellman_ford_shortest_paths{T}(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64, distmx::AbstractArray{T,2})
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/bellman-ford.jl#L70) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/bellman-ford.jl#L70) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/bellman-ford.jl#L75) [4](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/bellman-ford.jl#L75)*.
+
 Uses the [Bellman-Ford algorithm](http://en.wikipedia.org/wiki/Bellman–Ford_algorithm) to compute shortest paths between a source vertex `s` or a set of source vertices `ss`. Returns a `BellmanFordState` with relevant traversal information (see below).
 
 ### bellman_ford_shortest_paths
@@ -191,7 +210,8 @@ Uses the [Bellman-Ford algorithm](http://en.wikipedia.org/wiki/Bellman–Ford_al
 3  bellman_ford_shortest_paths(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 4  bellman_ford_shortest_paths{T}(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64, distmx::AbstractArray{T,2})
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/bellman-ford.jl#L70) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/bellman-ford.jl#L70) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/bellman-ford.jl#L75) [4](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/bellman-ford.jl#L75)*.
+
 Uses the [Bellman-Ford algorithm](http://en.wikipedia.org/wiki/Bellman–Ford_algorithm) to compute shortest paths between a source vertex `s` or a set of source vertices `ss`. Returns a `BellmanFordState` with relevant traversal information (see below).
 
 ### floyd_warshall_shortest_paths
@@ -199,7 +219,8 @@ Uses the [Bellman-Ford algorithm](http://en.wikipedia.org/wiki/Bellman–Ford_al
 1  floyd_warshall_shortest_paths(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 2  floyd_warshall_shortest_paths{T}(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, distmx::AbstractArray{T,2})
 ```
-*Source: [1](#pass) [2](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/floyd-warshall.jl#L24) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/floyd-warshall.jl#L24)*.
+
 Uses the [Floyd-Warshall algorithm](http://en.wikipedia.org/wiki/Floyd–Warshall_algorithm) to compute shortest paths between all pairs of vertices in graph `g`. Returns a `FloydWarshallState` with relevant traversal information, each is a vertex-indexed vector of vectors containing the metric for each vertex in the graph.
 
 Note that this algorithm may return a large amount of data (it will allocate on the order of $\mathcal{O}(nv^2)$).
@@ -212,7 +233,8 @@ Note that this algorithm may return a large amount of data (it will allocate on 
 ```
 1  gdistances(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph}, sources)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/traversals/bfs.jl#L133)*.
+
 Returns the geodesic distances of graph `g` from source vertex `s` or a set of source vertices `ss`.
 
 ### gdistances!
@@ -220,7 +242,8 @@ Returns the geodesic distances of graph `g` from source vertex `s` or a set of s
 1  gdistances!{DMap}(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph}, s::Int64, dists::DMap)
 2  gdistances!{DMap}(graph::Union{LightGraphs.DiGraph,LightGraphs.Graph}, sources::AbstractArray{Int64,1}, dists::DMap)
 ```
-*Source: [1](#pass) [2](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/traversals/bfs.jl#L114) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/traversals/bfs.jl#L121)*.
+
 Returns the geodesic distances of graph `g` from source vertex `s` or a set of source vertices `ss`.
 
 ### enumerate_paths
@@ -232,7 +255,8 @@ Returns the geodesic distances of graph `g` from source vertex `s` or a set of s
 5  enumerate_paths(state::LightGraphs.AbstractPathState, dest::Array{Int64,1})
 6  enumerate_paths(state::LightGraphs.AbstractPathState, dest)
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass) [5](#pass) [6](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/floyd-warshall.jl#L87) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/floyd-warshall.jl#L69) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/floyd-warshall.jl#L88) [4](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/bellman-ford.jl#L113) [5](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/bellman-ford.jl#L93) [6](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/shortestpaths/bellman-ford.jl#L112)*.
+
 Given a path state `state` of type `AbstractPathState` (see below), returns a vector (indexed by vertex) of the paths between the source vertex used to compute the path state and a destination vertex `v`, a set of destination vertices `vs`, or the entire graph. For multiple destination vertices, each path is represented by a vector of vertices on the path between the source and the destination. Nonexistent paths will be indicated by an empty vector. For single destinations, the path is represented by a single vector of vertices, and will be length 0 if the path does not exist.
 
 For Floyd-Warshall path states, please note that the output is a bit different, since this algorithm calculates all shortest paths for all pairs of vertices: `enumerate_paths(state)` will return a vector (indexed by source vertex) of vectors (indexed by destination vertex) of paths. `enumerate_paths(state, v)` will return a vector (indexed by destination vertex) of paths from source `v` to all other vertices. In addition, `enumerate_paths(state, v, d)` will return a vector representing the path from vertex `v` to vertex `d`.

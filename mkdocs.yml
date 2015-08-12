@@ -3,18 +3,18 @@ site_author: Seth Bromberger
 repo_url: https://github.com/JuliaGraphs/LightGraphs.jl/
 theme: readthedocs
 pages:
-  - 'Home': '_generated/index.md'
-  - 'About': '_generated/about.md'
-  - 'Getting Started': '_generated/gettingstarted.md'
-  - 'Operators': '_generated/operators.md'
-  - 'Path and Traversal': '_generated/pathing.md'
-  - 'Distance': '_generated/distance.md'
-  - 'Centrality measures': '_generated/centrality.md'
-  - 'Linear Algebra': '_generated/linalg.md'
-  - 'Graph Generators': '_generated/generators.md'
-  - 'Reading / Writing Graphs': '_generated/persistence.md'
-  - 'Integration with other packages': '_generated/integration.md'
-docs_dir: 'doc'
+  - 'Home': 'index.md'
+  - 'About': 'about.md'
+  - 'Getting Started': 'gettingstarted.md'
+  - 'Operators': 'operators.md'
+  - 'Path and Traversal': 'pathing.md'
+  - 'Distance': 'distance.md'
+  - 'Centrality measures': 'centrality.md'
+  - 'Linear Algebra': 'linalg.md'
+  - 'Graph Generators': 'generators.md'
+  - 'Reading / Writing Graphs': 'persistence.md'
+  - 'Integration with other packages': 'integration.md'
+docs_dir: 'doc/_generated'
 markdown_extensions:
   - extra
   - tables

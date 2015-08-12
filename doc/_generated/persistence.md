@@ -14,13 +14,7 @@ Graphs may be written to I/O streams and files using the `write` function:
 8  write(g::LightGraphs.DiGraph, fn::AbstractString)
 9  write(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, gname::AbstractString, fn::AbstractString)
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass) [5](#pass) [6](#pass) [7](#pass) [8](#pass) [9](#pass)*
-```rst
-::
-           write(stream, x)
-
-Write the canonical binary representation of a value to the given stream.
-```
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L67) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L77) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L78) [4](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L80) [5](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L81) [6](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L94) [7](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L114) [8](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L115) [9](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L107)*.
 
 Writes a graph `g` with name `graphname` in a proprietary format to the IO stream designated by `io`.
 
@@ -40,7 +34,8 @@ Graphs stored using the `write` functions above may be loaded using `readgraph`:
 1  readgraph(fn::AbstractString)
 2  readgraph(fn::AbstractString, gname::AbstractString)
 ```
-*Source: [1](#pass) [2](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L39) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L39)*.
+
 Returns a dictionary of (name=>graph) loaded from file `fn`.
 
 ### readgraphml
@@ -48,7 +43,8 @@ Returns a dictionary of (name=>graph) loaded from file `fn`.
 1  readgraphml(filename::AbstractString)
 2  readgraphml(filename::AbstractString, gname::AbstractString)
 ```
-*Source: [1](#pass) [2](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L147) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L147)*.
+
 Returns a dictionary (name=>graph) from file `fn` stored in [GraphML](http://en.wikipedia.org/wiki/GraphML) format. Can optionally restrict to a single graph by specifying a name in gname.
 
 ### readgml
@@ -56,7 +52,8 @@ Returns a dictionary (name=>graph) from file `fn` stored in [GraphML](http://en.
 1  readgml(filename::AbstractString)
 2  readgml(filename::AbstractString, gname::AbstractString)
 ```
-*Source: [1](#pass) [2](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L188) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/persistence.jl#L188)*.
+
 Returns a dictionary (name=>graph) from file `fn` stored in [GML](https://en.wikipedia.org/wiki/Graph_Modelling_Language) format. Can optionally restrict to a single graph by specifying a name in gname.
 
 

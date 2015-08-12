@@ -11,21 +11,24 @@ Centrality measures implemented in *LightGraphs.jl* include the following:
 ```
 1  degree_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/centrality/degree.jl#L21)*.
+
 Calculates the [degree centrality](https://en.wikipedia.org/wiki/Centrality#Degree_centrality) of the graph `g`, with optional (default) normalization.
 
 ### indegree_centrality
 ```
 1  indegree_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/centrality/degree.jl#L24)*.
+
 Calculates the [degree centrality](https://en.wikipedia.org/wiki/Centrality#Degree_centrality) of the graph `g`, with optional (default) normalization.
 
 ### outdegree_centrality
 ```
 1  outdegree_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/centrality/degree.jl#L27)*.
+
 Calculates the [degree centrality](https://en.wikipedia.org/wiki/Centrality#Degree_centrality) of the graph `g`, with optional (default) normalization.
 
 
@@ -36,7 +39,8 @@ Calculates the [degree centrality](https://en.wikipedia.org/wiki/Centrality#Degr
 ```
 1  closeness_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/centrality/closeness.jl#L8)*.
+
 Calculates the [closeness centrality](https://en.wikipedia.org/wiki/Centrality#Closeness_centrality) of the graph `g`.
 
 
@@ -48,7 +52,8 @@ Calculates the [closeness centrality](https://en.wikipedia.org/wiki/Centrality#C
 1  betweenness_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 2  betweenness_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, k::Integer)
 ```
-*Source: [1](#pass) [2](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/centrality/betweenness.jl#L58) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/centrality/betweenness.jl#L58)*.
+
 Calculates the [betweenness centrality](https://en.wikipedia.org/wiki/Centrality#Betweenness_centrality) of the graph `g`, or, optionally, of a random subset of `k` vertices. Can optionally include endpoints in the calculations. Normalization is enabled by default.
 
 Betweeness centrality is defined as:
@@ -86,7 +91,8 @@ betweenness: Array{Float64}     Betweenness centrality value per node id.
 1  katz_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 2  katz_centrality(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, α::Real)
 ```
-*Source: [1](#pass) [2](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/centrality/katz.jl#L28) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/centrality/katz.jl#L28)*.
+
 Calculates the [Katz centrality](https://en.wikipedia.org/wiki/Katz_centrality) of the graph `g`.
 
 
@@ -100,6 +106,7 @@ Calculates the [Katz centrality](https://en.wikipedia.org/wiki/Katz_centrality) 
 3  pagerank(g::LightGraphs.DiGraph, α, n)
 4  pagerank(g::LightGraphs.DiGraph, α, n, ϵ)
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/centrality/pagerank.jl#L10) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/centrality/pagerank.jl#L10) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/centrality/pagerank.jl#L10) [4](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/centrality/pagerank.jl#L10)*.
+
 Calculates the [PageRank](https://en.wikipedia.org/wiki/PageRank) of the graph `g`. Can optionally specify a different damping factor (`α`), number of iterations (`n`), and convergence threshold (`ϵ`). If convergence is not reached within `n` iterations, an error will be returned.
 

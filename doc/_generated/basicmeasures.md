@@ -8,14 +8,16 @@ types:
 ```
 1  vertices(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L57)*.
+
 Return the vertices of a graph.
 
 ### edges
 ```
 1  edges(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L60)*.
+
 Return the edges of a graph.
 
 ### is_directed
@@ -23,21 +25,24 @@ Return the edges of a graph.
 1  is_directed(g::LightGraphs.DiGraph)
 2  is_directed(g::LightGraphs.Graph)
 ```
-*Source: [1](#pass) [2](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/digraph.jl#L67) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/graph.jl#L58)*.
+
 Returns `true` if `g` is a `DiGraph`.
 
 ### nv
 ```
 1  nv(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L125)*.
+
 The number of vertices in `g`.
 
 ### ne
 ```
 1  ne(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L127)*.
+
 The number of edges in `g`.
 
 ### has_edge
@@ -46,55 +51,55 @@ The number of edges in `g`.
 2  has_edge(g::LightGraphs.DiGraph, e::Pair{Int64,Int64})
 3  has_edge(g::LightGraphs.Graph, e::Pair{Int64,Int64})
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L114) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/digraph.jl#L87) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/graph.jl#L59)*.
+
 Return true if the graph `g` has an edge from `src` to `dst`.
 
 ### has_vertex
 ```
 1  has_vertex(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L122)*.
+
 Return true if `v` is a vertex of `g`.
 
 ### in_edges
 ```
 1  in_edges(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L117)*.
+
 Return an Array of the edges in `g` that arrive at vertex `v`.
 
 ### out_edges
 ```
 1  out_edges(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L119)*.
+
 Return an Array of the edges in `g` that emanate from vertex `v`.
 
 ### src
 ```
 1  src(e::Pair{Int64,Int64})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L26)*.
+
 Return source of an edge.
 
 ### dst
 ```
 1  dst(e::Pair{Int64,Int64})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L28)*.
+
 Return destination of an edge.
 
 ### reverse
 ```
 1  reverse(g::LightGraphs.DiGraph)
 ```
-*Source: [1](#pass)*
-```rst
-::
-           reverse(v [, start=1 [, stop=length(v) ]] )
-
-Return a copy of ``v`` reversed from start to stop.
-```
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/operators.jl#L34)*.
 
 (`DiGraph` only) Produces a graph where all edges are reversed from the original.
 
@@ -109,7 +114,8 @@ Return a copy of ``v`` reversed from start to stop.
 3  degree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 4  degree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::AbstractArray{Int64,1})
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/digraph.jl#L89) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/graph.jl#L90) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L156) [4](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L156)*.
+
 Return the number of edges (both ingoing and outgoing) from the vertex `v`.
 
 ### indegree
@@ -118,7 +124,8 @@ Return the number of edges (both ingoing and outgoing) from the vertex `v`.
 2  indegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 3  indegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::AbstractArray{Int64,1})
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L154) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L149) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L154)*.
+
 Return the number of edges which start at vertex `v`.
 
 ### outdegree
@@ -127,56 +134,64 @@ Return the number of edges which start at vertex `v`.
 2  outdegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 3  outdegree(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::AbstractArray{Int64,1})
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L155) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L151) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L155)*.
+
 Return the number of edges which end at vertex `v`.
 
 ### Δ
 ```
 1  Δ(g)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L169)*.
+
 Return the maximum `degree` of vertices in `g`.
 
 ### δ
 ```
 1  δ(g)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L167)*.
+
 Return the minimum `degree` of vertices in `g`.
 
 ### Δout
 ```
 1  Δout(g)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L159)*.
+
 Return the maxium `outdegree` of vertices in `g`.
 
 ### δout
 ```
 1  δout(g)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L161)*.
+
 Return the minimum `outdegree` of vertices in `g`.
 
 ### δin
 ```
 1  δin(g)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L163)*.
+
 Return the maximum `indegree` of vertices in `g`.
 
 ### Δin
 ```
 1  Δin(g)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L165)*.
+
 Return the minimum `indegree` of vertices in `g`.
 
 ### degree_histogram
 ```
 1  degree_histogram(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L186)*.
+
 Produces a histogram of degree values across all vertices for the graph `g`. The number of histogram buckets is based on the number of vertices in `g`.
 
 ### density
@@ -184,14 +199,16 @@ Produces a histogram of degree values across all vertices for the graph `g`. The
 1  density(g::LightGraphs.DiGraph)
 2  density(g::LightGraphs.Graph)
 ```
-*Source: [1](#pass) [2](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/digraph.jl#L92) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/graph.jl#L95)*.
+
 Density is defined as the ratio of the number of actual edges to the number of possible edges. This is $|v| |v-1|$ for directed graphs and $(|v| |v-1|) / 2$ for undirected graphs.
 
 ### neighbors
 ```
 1  neighbors(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L198)*.
+
 Returns a list of all neighbors of vertex `v` in `g`.
 
 For DiGraphs, this is equivalent to `out_neighbors(g, v)`.
@@ -200,21 +217,24 @@ For DiGraphs, this is equivalent to `out_neighbors(g, v)`.
 ```
 1  in_neighbors(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, v::Int64)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L190)*.
+
 Returns a list of all neighbors connected to vertex `v` by an incoming edge.
 
 ### all_neighbors
 ```
 1  all_neighbors(g::LightGraphs.DiGraph, v::Int64)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/digraph.jl#L91)*.
+
 Returns all the vertices which share an edge with `v`.
 
 ### common_neighbors
 ```
 1  common_neighbors(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, u::Int64, v::Int64)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/core.jl#L200)*.
+
 Returns the neighbors common to vertices `u` and `v` in `g`.
 
 

@@ -10,7 +10,8 @@ undirected graphs:
 2  adjacency_matrix(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, dir::Symbol)
 3  adjacency_matrix(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, dir::Symbol, T::DataType)
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L10) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L10) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L10)*.
+
 Returns a sparse boolean adjacency matrix for a graph, indexed by `[src, dst]` vertices. `true` values indicate an edge between `src` and `dst`. Users may specify a direction (`:in`, `:out`, or `:both` are currently supported; `:out` is default for both directed and undirected graphs) and a data type for the matrix (defaults to `Int`).
 
 Note: This function is optimized for speed.
@@ -24,7 +25,8 @@ Note: This function is optimized for speed.
 5  adjacency_spectrum(g::LightGraphs.DiGraph, dir::Symbol)
 6  adjacency_spectrum(g::LightGraphs.DiGraph, dir::Symbol, T::DataType)
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass) [5](#pass) [6](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L69) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L69) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L69) [4](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L70) [5](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L70) [6](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L70)*.
+
 Returns the eigenvalues of the adjacency matrix for a graph `g`, indexed by vertex. Warning: Converts the matrix to dense with $nv^2$ memory usage. Use `eigs(adjacency_matrix(g);kwargs...)` to compute some of the eigenvalues/eigenvectors. Default values for `dir` and `T` are the same as `adjacency_matrix`.
 
 
@@ -40,7 +42,8 @@ Returns the eigenvalues of the adjacency matrix for a graph `g`, indexed by vert
 5  laplacian_matrix(g::LightGraphs.DiGraph, dir::Symbol)
 6  laplacian_matrix(g::LightGraphs.DiGraph, dir::Symbol, T::DataType)
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass) [5](#pass) [6](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L43) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L43) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L43) [4](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L49) [5](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L49) [6](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L49)*.
+
 Returns a sparse [Laplacian matrix](https://en.wikipedia.org/wiki/Laplacian_matrix) for a graph `g`, indexed by `[src, dst]` vertices. For undirected graphs, `dir` defaults to `:out`; for directed graphs, `dir` defaults to `:both`. `T` defaults to `Int` for both graph types.
 
 ### laplacian_spectrum
@@ -52,6 +55,7 @@ Returns a sparse [Laplacian matrix](https://en.wikipedia.org/wiki/Laplacian_matr
 5  laplacian_spectrum(g::LightGraphs.DiGraph, dir::Symbol)
 6  laplacian_spectrum(g::LightGraphs.DiGraph, dir::Symbol, T::DataType)
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass) [5](#pass) [6](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L60) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L60) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L60) [4](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L61) [5](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L61) [6](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/linalg.jl#L61)*.
+
 Returns the eigenvalues of the Laplacian matrix for a graph `g`, indexed by vertex. Warning: Converts the matrix to dense with $nv^2$ memory usage. Use `eigs(laplacian_matrix(g);  kwargs...)` to compute some of the eigenvalues/eigenvectors. Default values for `dir` and `T` are the same as `laplacian_matrix`.
 

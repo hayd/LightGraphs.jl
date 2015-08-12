@@ -8,13 +8,7 @@ functions with two graph arguments will require them to be of the same type
 1  complement(g::LightGraphs.Graph)
 2  complement(g::LightGraphs.DiGraph)
 ```
-*Source: [1](#pass) [2](#pass)*
-```rst
-::
-           complement(s)
-
-Returns the set-complement of :obj:`IntSet` ``s``.
-```
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/operators.jl#L4) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/operators.jl#L17)*.
 
 Produces the [graph complement](https://en.wikipedia.org/wiki/Complement_graph) of a graph.
 
@@ -22,13 +16,7 @@ Produces the [graph complement](https://en.wikipedia.org/wiki/Complement_graph) 
 ```
 1  reverse(g::LightGraphs.DiGraph)
 ```
-*Source: [1](#pass)*
-```rst
-::
-           reverse(v [, start=1 [, stop=length(v) ]] )
-
-Return a copy of ``v`` reversed from start to stop.
-```
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/operators.jl#L34)*.
 
 (`DiGraph` only) Produces a graph where all edges are reversed from the original.
 
@@ -36,13 +24,7 @@ Return a copy of ``v`` reversed from start to stop.
 ```
 1  reverse!(g::LightGraphs.DiGraph)
 ```
-*Source: [1](#pass)*
-```rst
-::
-           reverse!(v [, start=1 [, stop=length(v) ]]) -> v
-
-In-place version of :func:`reverse`.
-```
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/operators.jl#L45)*.
 
 (`DiGraph` only) In-place reverse (modifies the original graph).
 
@@ -50,13 +32,7 @@ In-place version of :func:`reverse`.
 ```
 1  blkdiag{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
-```rst
-::
-           blkdiag(A...)
-
-Concatenate matrices block-diagonally. Currently only implemented for sparse matrices.
-```
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/operators.jl#L61)*.
 
 Produces a graph with $|V(g)| + |V(h)|$ vertices and $|E(g)| + |E(h)|$ edges.
 
@@ -66,14 +42,7 @@ Put simply, the vertices and edges from graph `h` are appended to graph `g`.
 ```
 1  intersect{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
-```rst
-::
-           intersect(s1,s2...)
-           ∩(s1,s2)
-
-Construct the intersection of two or more sets. Maintains order and multiplicity of the first argument for arrays and ranges.
-```
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/operators.jl#L77)*.
 
 Produces a graph with edges that are only in both graph `g` and graph `h`.
 
@@ -83,7 +52,8 @@ Note that this function may produce a graph with 0-degree vertices.
 ```
 1  difference{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/operators.jl#L92)*.
+
 Produces a graph with edges in graph `g` that are not in graph `h`.
 
 Note that this function may produce a graph with 0-degree vertices.
@@ -92,7 +62,8 @@ Note that this function may produce a graph with 0-degree vertices.
 ```
 1  symmetric_difference{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/operators.jl#L110)*.
+
 Produces a graph with edges from graph `g` that do not exist in graph `h`, and vice versa.
 
 Note that this function may produce a graph with 0-degree vertices.
@@ -101,14 +72,7 @@ Note that this function may produce a graph with 0-degree vertices.
 ```
 1  union{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, h::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph})
 ```
-*Source: [1](#pass)*
-```rst
-::
-           union(s1,s2...)
-           ∪(s1,s2)
-
-Construct the union of two or more sets. Maintains order with arrays.
-```
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/operators.jl#L130)*.
 
 Merges graphs `g` and `h` by taking the set union of all vertices and edges.
 
@@ -116,6 +80,8 @@ Merges graphs `g` and `h` by taking the set union of all vertices and edges.
 ```
 1  induced_subgraph{T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}}(g::T<:Union{LightGraphs.DiGraph,LightGraphs.Graph}, iter)
 ```
-*Source: [1](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/operators.jl#L144)*.
+
 Filters graph `g` to include only the vertices present in the iterable argument `vs`. Returns the subgraph of `g` induced by `vs`.
+
 

@@ -10,7 +10,8 @@
 5  eccentricity{T}(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, vs::AbstractArray{Int64,1}, distmx::AbstractArray{T,2})
 6  eccentricity{T}(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, distmx::AbstractArray{T,2})
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass) [4](#pass) [5](#pass) [6](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L41) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L35) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L35) [4](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L41) [5](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L41) [6](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L48)*.
+
 Calculates the eccentricity[ies] of a vertex `v`, vertex vector `vs`, or the entire graph. An optional matrix of edge distances may be supplied.
 
 The eccentricity of a vertex is the maximum shortest-path distance between it and all other vertices in the graph.
@@ -27,7 +28,8 @@ Note: the eccentricity vector returned by `eccentricity()` may be used as input 
 2  radius(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 3  radius{T}(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, distmx::AbstractArray{T,2})
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L69) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L70) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L70)*.
+
 Returns the minimum eccentricity of the graph.
 
 ### diameter
@@ -36,7 +38,8 @@ Returns the minimum eccentricity of the graph.
 2  diameter(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 3  diameter{T}(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, distmx::AbstractArray{T,2})
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L52) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L53) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L53)*.
+
 Returns the maximum eccentricity of the graph.
 
 ### center
@@ -45,7 +48,8 @@ Returns the maximum eccentricity of the graph.
 2  center(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 3  center{T}(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, distmx::AbstractArray{T,2})
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L77) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L81) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L81)*.
+
 Returns the set of all vertices whose eccentricity is equal to the graph's radius (that is, the set of vertices with the smallest eccentricity).
 
 ### periphery
@@ -54,7 +58,8 @@ Returns the set of all vertices whose eccentricity is equal to the graph's radiu
 2  periphery(g::Union{LightGraphs.DiGraph,LightGraphs.Graph})
 3  periphery{T}(g::Union{LightGraphs.DiGraph,LightGraphs.Graph}, distmx::AbstractArray{T,2})
 ```
-*Source: [1](#pass) [2](#pass) [3](#pass)*
+*Source: [1](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L61) [2](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L65) [3](https://github.com/JuliaGraphs/LightGraphs.jl/tree/ee65811af7056c6ae43447a6c983a6d9708bf0cf/src/distance.jl#L65)*.
+
 Returns the set of all vertices whose eccentricity is equal to the graph's diameter (that is, the set of vertices with the largest eccentricity).
 
 
